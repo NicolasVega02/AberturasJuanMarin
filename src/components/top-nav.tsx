@@ -2,7 +2,7 @@ import { CartIcon } from "@/components/ui/icons";
 
 export function TopNav() {
   return (
-    <nav className="glass-nav fixed top-0 z-50 h-20 w-full shadow-sm bg-slate-900/70">
+    <nav className="glass-nav fixed top-0 z-50 h-20 w-full shadow-sm bg-slate-900/90">
       <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between px-4 sm:px-8">
         <div className="font-headline text-base font-bold tracking-tight sm:text-xl text-slate-100">
           Aberturas Juan Marin
