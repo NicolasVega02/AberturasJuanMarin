@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { TopNav } from "@/components/top-nav";
 import { SiteFooter } from "@/components/site-footer";
+import Script from "next/script";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -29,6 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${manrope.variable} ${inter.variable} h-full`}>
+      <head>
+        <Script
+          src="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-surface font-body text-on-surface antialiased">
         <TopNav />
         {children}
