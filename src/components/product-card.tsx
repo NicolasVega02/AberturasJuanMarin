@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { Producto } from "@/types";
 
 interface ProductCardProps {
@@ -9,16 +10,19 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="group bg-surface-container-low p-4 border border-outline/10 hover:shadow-[0_12px_40px_rgba(43,52,55,0.06)] transition-all duration-500 cursor-pointer">
-      <div className="aspect-[4/5] bg-surface-container-lowest overflow-hidden relative">
+    <Link
+      href={`/productos/${product.id}`}
+      className="group block cursor-pointer border border-outline/10 bg-surface-container-low p-4 transition-all duration-500 hover:shadow-[0_12px_40px_rgba(43,52,55,0.06)]"
+    >
+      <div className="relative aspect-[4/5] overflow-hidden bg-surface-container-lowest">
         <Image
           src={product.imagen_url}
           alt={product.titulo}
           fill
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {product.linea && (
-          <div className="absolute top-4 right-4 bg-surface-container-lowest px-3 py-1 text-[10px] font-bold uppercase tracking-tighter text-on-surface">
+          <div className="absolute top-4 right-4 bg-surface-container-lowest px-3 py-1 text-[10px] font-bold tracking-tighter text-on-surface uppercase">
             {product.linea}
           </div>
         )}
@@ -58,6 +62,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 }

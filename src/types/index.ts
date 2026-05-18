@@ -22,3 +22,21 @@ export interface FilterState {
   lines: string[];
   searchQuery: string;
 }
+
+export interface ItemCarrito {
+  productoId: string;
+  cantidad: number;
+}
+
+export interface ItemCarritoDetallado extends ItemCarrito {
+  producto: Producto;
+  precioUnitario: number;
+}
+
+export interface SummaryData {
+  cantidadTotal: number;
+  subtotal: number;
+  costoLogistica: number;
+  total: number;
+  linkWhatsApp: string;
+}

@@ -15,12 +15,6 @@ export function ProjectsSection() {
               Proyectos Destacados
             </h2>
           </div>
-          <button
-            type="button"
-            className="hidden items-center gap-2 border-b-2 border-primary/20 pb-1 font-headline text-xs font-bold tracking-widest text-on-surface uppercase transition-all hover:border-primary md:flex"
-          >
-            Ver Todos
-          </button>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {projects.map((project) => (

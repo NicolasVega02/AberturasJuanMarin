@@ -10,7 +10,7 @@ export function SiteFooter() {
           </h4>
           <p className="mb-8 max-w-xs text-sm leading-relaxed text-slate-400">
             La referencia en cerramientos de alta gama. Fusionando tecnología
-            alemana con diseño arquitectónico.
+            con diseño arquitectónico.
           </p>
           <div className="flex gap-4">
             <a
